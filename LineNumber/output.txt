@@ -1,0 +1,49 @@
+      1:#define	_CRT_SECURE_NO_WARNINGS
+      2:#include <stdio.h>
+      3:#include <stdbool.h> //C言語用
+      4:bool copy_line(FILE* fpIn, FILE* fpOut)
+      5:{
+      6:	for (;;) {
+      7:		const int ch = fgetc(fpIn);
+      8:		switch (ch) {
+      9:		case EOF:
+     10:			return false;
+     11:		case '\n':
+     12:			fputc('\n', fpOut);
+     13:			return true;
+     14:		default:
+     15:			fputc(ch, fpOut);
+     16:			continue;
+     17:		}
+     18:	}
+     19:}
+     20:int main()
+     21:{
+     22:	FILE* fpIn = fopen(__FILE__, "r");
+     23:	if (fpIn) {
+     24:		FILE* fpOut = fopen("output.txt", "w");
+     25:		if (fpOut) {
+     26:			for (int line_number = 1;;) {
+     27:				const int ch = fgetc(fpIn);
+     28:				if (ch == EOF)
+     29:					break;//終わり
+     30:				else {
+     31:					fprintf(fpOut, "%7d:%c", line_number++, ch);
+     32:					if (ch == '\n')
+     33:						continue;
+     34:					else if (copy_line(fpIn, fpOut))
+     35:						continue;
+     36:					else
+     37:						break;//終わり
+     38:				}
+     39:			}
+     40:			fclose(fpOut);
+     41:		}
+     42:		else
+     43:			fprintf(stderr, "出力ファイルのオープンに失敗しました。\n");
+     44:		fclose(fpIn);
+     45:	}
+     46:	else {
+     47:		fprintf(stderr, "入力ファイルのオープンに失敗しました。\n");
+     48:	}
+     49:}
