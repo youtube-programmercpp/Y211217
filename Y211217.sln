@@ -19,6 +19,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ConsoleApplication6", "Cons
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ConsoleApplication7_charset", "ConsoleApplication7_charset\ConsoleApplication7_charset.vcxproj", "{BF4AF489-4362-474D-809F-9460991B658F}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ConsoleApplication8_function", "ConsoleApplication8_function\ConsoleApplication8_function.vcxproj", "{5CAE9F84-F374-436B-99A1-3A241873897D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -91,6 +93,14 @@ Global
 		{BF4AF489-4362-474D-809F-9460991B658F}.Release|x64.Build.0 = Release|x64
 		{BF4AF489-4362-474D-809F-9460991B658F}.Release|x86.ActiveCfg = Release|Win32
 		{BF4AF489-4362-474D-809F-9460991B658F}.Release|x86.Build.0 = Release|Win32
+		{5CAE9F84-F374-436B-99A1-3A241873897D}.Debug|x64.ActiveCfg = Debug|x64
+		{5CAE9F84-F374-436B-99A1-3A241873897D}.Debug|x64.Build.0 = Debug|x64
+		{5CAE9F84-F374-436B-99A1-3A241873897D}.Debug|x86.ActiveCfg = Debug|Win32
+		{5CAE9F84-F374-436B-99A1-3A241873897D}.Debug|x86.Build.0 = Debug|Win32
+		{5CAE9F84-F374-436B-99A1-3A241873897D}.Release|x64.ActiveCfg = Release|x64
+		{5CAE9F84-F374-436B-99A1-3A241873897D}.Release|x64.Build.0 = Release|x64
+		{5CAE9F84-F374-436B-99A1-3A241873897D}.Release|x86.ActiveCfg = Release|Win32
+		{5CAE9F84-F374-436B-99A1-3A241873897D}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
